@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BREDCTIR</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  
+ 
+   <!-- Google Fonts -->
+   <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i' %}" rel="stylesheet">
+ 
+   <!-- Vendor CSS Files -->
+   <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+   <link href="{% static 'assets/vendor/animate.css/animate.min.css'%}" rel="stylesheet">
+   <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+   <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+   <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+   <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+   <link href="{% static 'assets/vendor/remixicon/remixicon.css'%}" rel="stylesheet">
+   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+ 
+   <!-- Template Main CSS File -->
+   <link href="{% static 'assets/css/STYLE.css' %}" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">www.predict.com</a>
+        <i class="bi bi-phone"></i> 078647357
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="INDEX.HTML" class="logo me-auto"><img src="{% static 'assets/img/2.png'%}" alt="" class="img-fluid"></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{% url 'home' %}">Home</a></li>
+          <li class="dropdown"><a href="ABOUT.html"><span>About Predict</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Who is it for?</a></li>
+              
+              <li><a href="#">How Predict works</a></li>
+              <li><a href="#">Who built Predict?</a></li>
+              
+                
+              
+            </ul>
+          </li>
+          
+          <li><a class="nav-link scrollto" href="{% url 'tool' %}">Predict Tool</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'faqs' %}">FAQS</a></li>
+          
+          
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+     
+    </div>
+  </header><!-- End Header -->
+   <!-- ======= Frequently Asked Questions Section ======= -->
+   <section id="faq" class="faq section-bg" style="background-color: #f7e5f1;">
+    <div class="container" >
+
+      <div class="section-title">
+        <h2 style="margin-top: 100px;color: #3B3486;">Frequently Asked Questions</h2>
+       
+      </div>
+
+      <div class="faq-list">
+        <ul>
+          <li data-aos="fade-up">
+            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1" style="color: #7469B6;">Looking for advice? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+              <p style="color: #AD88C6; font-family: Arial, Helvetica, sans-serif;">
+                Information about treatments:
+              </p>
+              <p><a href="https://www.khcc.jo/" style="color: #7469B6; " >King Hussein Cancer Foundation and Center</a></p>
+              <p><a href="http://www.cancerresearchuk.org/about-cancer/breast-cancer/treatment" style="color: #7469B6;" >Cancer research UK</a></p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="100">
+            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">More information about side effects:? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+              <p><a href="https://www.breastcancercare.org.uk/information-support/facing-breast-cancer/going-through-treatment-breast-cancer/side-effects">Breast Cancer Care</a></p>
+              <p><a href="https://www.macmillan.org.uk/information-and-support/breast-cancer/coping/side-effects-and-symptoms">Macmillan</a></p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">How do I know that Predict gives the right answers? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="300">
+            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">What about men with breast cancer?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Predict has only been designed and tested with data from women and should not be used to make predictions for men with breast cancer.
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="400">
+            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">How was the computer programme developed? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+            <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+              <p>
+        
+              </p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </section><!-- End Frequently Asked Questions Section -->
+    <!-- Vendor JS Files -->
+   <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js'%}"></script>
+   <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+   <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+   <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+   <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+ 
+   <!-- Template Main JS File -->
+   <script src="{% static 'assets/js/main.js'%}"></script>
+</body>
+</html>  
