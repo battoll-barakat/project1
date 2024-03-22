@@ -6,14 +6,15 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>BREDCTIR</title>
+  <title>PBC</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   
+  <link rel="icon" href="{% static 'assets/img/2.png'%}" type="image/x-icon">
 
   <!-- Google Fonts -->
-  <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i' %}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
@@ -23,7 +24,7 @@
   <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
   <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
   <link href="{% static 'assets/vendor/remixicon/remixicon.css'%}" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/STYLE.css' %}" rel="stylesheet">
@@ -53,18 +54,18 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="INDEX.html" class="logo me-auto"><img src="{% static 'assets/img/2.png'%}" alt="" class="img-fluid"></a></h1>
+      <h1 class="logo me-auto"><a href="{% url 'home' %}" class="logo me-auto"><img src="{% static 'assets/img/2.png'%}" alt="" class="img-fluid"></a></h1>
      
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="{% url 'home' %}">Home</a></li>
-          <li class="dropdown"><a href="ABOUT.html"><span>About Predict</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto " href="{% url 'home' %}">Home</a></li>
+          <li class="dropdown"><a href="{% url 'about' %}"><span>About Predict</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Who is it for?</a></li>
+              <li><a href="#tab-1">Who is it for?</a></li>
               
-              <li><a href="#">How Predict works</a></li>
-              <li><a href="#">Who built Predict?</a></li>
+              <li><a href="#tab-1">How Predict works</a></li>
+              <li><a href="#tab-1">Who built Predict?</a></li>
               
                 
               
@@ -72,6 +73,8 @@
           </li>
           
           <li><a class="nav-link scrollto" href="{% url 'tool' %}">Predict Tool</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'awarness'%}">AWARNESS</a></li>
+
           <li><a class="nav-link scrollto" href="{% url 'faqs' %}">FAQS</a></li>
           
           
@@ -85,12 +88,12 @@
   </header><!-- End Header -->
 
  <!-- ======= About Section ======= -->
- <section id="About" class="About">
+ <section id="About" class="About" style="background-color: #f7e5f1; background-size: 100% 100%;">
     <div class="container">
 
       <div class="section-title">
        
-        <p style="padding: 70px; font-family: 'Gill Sans MT', sans-serif;">Predict is a tool that helps show how breast cancer treatments after surgery might improve survival rates. Once details about the patient and their cancer have been entered, the tool will show how different treatments would be expected to improve survival rates up to 15 years after diagnosis. This is based on data from similar women in the past. It is important to note that these treatments have side effects which should also be considered when deciding on a treatment</p>
+        <p style=" color: #30013b ;padding: 90px; font-family: 'Gill Sans MT', sans-serif;">Predict is a tool that helps show how breast cancer treatments after surgery might improve survival rates. Once details about the patient and their cancer have been entered, the tool will show how different treatments would be expected to improve survival rates up to 15 years after diagnosis. This is based on data from similar women in the past. It is important to note that these treatments have side effects which should also be considered when deciding on a treatment</p>
       </div>
 
       <div class="row gy-4">
@@ -114,10 +117,11 @@
             <div class="tab-pane active show" id="tab-1">
               <div class="row gy-4">
                 <div class="col-lg-8 details order-2 order-lg-1">
-                  <h3>Who is it for?<p>The tool applies to women who have had surgery for early invasive breast cancer and are deciding which other treatments to have.
+                  <h3>Who is it for?</h3>
+                  <p class="fst-italic" style=" color:#30013b;">The tool applies to women who have had surgery for early invasive breast cancer and are deciding which other treatments to have.
 
-                  <p>The data on which PREDICT is based did not include information on the presence of bilateral disease. The performance of the model on women with bilateral breast cancer is not known. The benefits of chemotherapy applied in the model were taken from the Early Breast Cancer Trialist Collaborative Group meta-analysis of adjuvant chemotherapy trials. A similar benefit is likely to apply to neo-adjuvant chemotherapy. It is not designed for women whose cancer has already spread to distant parts of the body at the time it is diagnosed or for women who only have non-invasive breast cancer, such as as Ductal Carcinoma In Situ or Lobular Carcinoma In Situ.Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                  <p> The current version of the tool does not include all the treatments that are currently available. We are working to include more in the near future. In the meantime, an appropriate clinician will be able to advise on all the treatment options suitable for a particular patient.
+                  The data on which PREDICT is based did not include information on the presence of bilateral disease. The performance of the model on women with bilateral breast cancer is not known. The benefits of chemotherapy applied in the model were taken from the Early Breast Cancer Trialist Collaborative Group meta-analysis of adjuvant chemotherapy trials. A similar benefit is likely to apply to neo-adjuvant chemotherapy. It is not designed for women whose cancer has already spread to distant parts of the body at the time it is diagnosed or for women who only have non-invasive breast cancer, such as as Ductal Carcinoma In Situ or Lobular Carcinoma In Situ.Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                   The current version of the tool does not include all the treatments that are currently available. We are working to include more in the near future. In the meantime, an appropriate clinician will be able to advise on all the treatment options suitable for a particular patient.
 
                     Predict only asks for certain information about the cancer. The inputs it asks for are the ones that we have enough information about to predict how they affect survival rates. It does not differentiate between the types of surgery (for example, mastectomy or lumpectomy) or ask for lifestyle factors such as smoking or exercise. These will affect survival, but at the moment we can't say by how much.</p>
                 </div>
@@ -130,11 +134,11 @@
               <div class="row gy-4">
                 <div class="col-lg-8 details order-2 order-lg-1">
                   <h3>How Predict works</h3>
-                  <p class="fst-italic">The estimates that Predict produces are based on scientific studies that have been conducted into how effective breast cancer treatments are. We know from studies involving many thousands of women that the benefit from treatment is affected by the size and type of the cancer at diagnosis, whether the cancer has spread to involve lymph nodes, and whether or not the cancer expresses markers such as the oestrogen receptor (ER), HER2 and KI67. By analysing the results of these studies, statisticians are able to say how these aspects of the cancer are likely to affect average survival and how much benefit might be gained on average from different treatment options.</p>
+                  <p class="fst-italic" style=" color:#30013b;">The estimates that Predict produces are based on scientific studies that have been conducted into how effective breast cancer treatments are. We know from studies involving many thousands of women that the benefit from treatment is affected by the size and type of the cancer at diagnosis, whether the cancer has spread to involve lymph nodes, and whether or not the cancer expresses markers such as the oestrogen receptor (ER), HER2 and KI67. By analysing the results of these studies, statisticians are able to say how these aspects of the cancer are likely to affect average survival and how much benefit might be gained on average from different treatment options.</p>
                    
                 </div>
                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                  <img src="2.png" alt="" class="img-fluid">
+                  <img src="{% static 'assets/img/2.png'%}" alt="" class="img-fluid">
                 </div>
               </div>
             </div>
@@ -142,11 +146,11 @@
               <div class="row gy-4">
                 <div class="col-lg-8 details order-2 order-lg-1">
                   <h3>Who built Predict?</h3>
-                  <p class="fst-italic">Development of the model was a collaborative project between the Cambridge Breast Unit, University of Cambridge Department of Oncology and the UK's Eastern Cancer Information and Registration Centre (ECRIC) (now part of the National Cancer Registration and Analysis Service) and was supported by an unrestricted educational grant from Pfizer Limited (the company had no input into the model at all).</p>
+                  <p class="fst-italic" style=" color:#30013b;">Development of the model was a collaborative project between the Cambridge Breast Unit, University of Cambridge Department of Oncology and the UK's Eastern Cancer Information and Registration Centre (ECRIC) (now part of the National Cancer Registration and Analysis Service) and was supported by an unrestricted educational grant from Pfizer Limited (the company had no input into the model at all).</p>
               
                 </div>
                 <div class="col-lg-4 text-center order-1 order-lg-2">
-                  <img src="6.jpeg" alt="" class="img-fluid">
+                  <img src="{% static 'assets/img/6.jpeg'%}" alt="" class="img-fluid">
                 </div>
               </div>
             </div>

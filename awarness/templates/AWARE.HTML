@@ -1,0 +1,247 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PBC</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="icon" href="{% static 'assets/img/2.png'%}" type="image/x-icon">
+ 
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"rel="stylesheet">
+ 
+   <!-- Vendor CSS Files -->
+   <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+   <link href="{% static 'assets/vendor/animate.css/animate.min.css'%}" rel="stylesheet">
+   <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+   <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+   <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+   <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+   <link href="{% static 'assets/vendor/remixicon/remixicon.css'%}" rel="stylesheet">
+   <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+ 
+   <!-- Template Main CSS File -->
+   <link href="{% static 'assets/css/STYLE.css' %}" rel="stylesheet">
+   
+   
+
+  
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">www.predict.com</a>
+        <i class="bi bi-phone"></i> 078647357
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="{% url 'home' %}" class="logo me-auto"><img src="{% static 'assets/img/2.png'%}" alt="" class="img-fluid"></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " href="{% url 'home' %}">Home</a></li>
+          <li class="dropdown"><a href="{% url 'about' %}"><span>About Predict</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Who is it for?</a></li>
+              
+              <li><a href="#">How Predict works</a></li>
+              <li><a href="#">Who built Predict?</a></li>
+              
+                
+              
+            </ul>
+          </li>
+          
+          <li><a class="nav-link scrollto" href="{% url 'tool' %}">Predict Tool</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'awarness'%}">AWARNESS</a></li>
+
+          <li><a class="nav-link scrollto" href="{% url 'faqs' %}">FAQS</a></li>
+          
+          
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+     
+    </div>
+  </header><!-- End Header -->
+   <!-- ======= about breast Section ======= -->
+   <section id="about" class="about" style="background-color: #f7e5f1; background-size: 100% 100%;">
+    <div class="container-fluid"  >
+
+      <div class="row">
+        
+        
+        
+
+        <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+          <h3 style="margin: 50px;">BREAST CANCER AWARNESS</h3>
+          <p>
+            We hope that this will lead to early detection which is important in the management and treatment of cancer and also prevention by making necessary changes in lifestyle.
+          </p>
+
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-fingerprint"></i></div>
+            <h4 class="title"><a href="">What is Breast Cancer?</a></h4>
+            <p class="description">Breast cancer is a disease in which cells in the breast experience an abnormal growth and can sometimes be felt as a lump or mass called a tumour. Tumours can be benign (non-cancerous) or malignant (cancerous). In the event that a tumour is cancerous, the cancerous cells can spread to other parts of the body.</p>
+          </div>
+
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-bell"></i></div>
+            <h4 class="title"><a href="">Importance of Early Detection</a></h4>
+            <p class="description">Breast Cancer is the most common cancer among women in Singapore, with 1 in 20 women at risk of developing breast cancer in their lifetime. However, early detection and treatment of breast cancer can significantly improve outcomes and chances of survival. When cancer is diagnosed early, it can be easier to treat and there are more treatment options available. Learn more about health screenings for women here.
+
+              More than 90% of women diagnosed with breast cancer at the earliest stage remain well and disease-free after 5 years or more, compared to around 15% for women diagnosed at the most advanced stage</p>
+          </div>
+
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-calendar-heart"></i></div>
+            <h4 class="title"><a href="">Age and breast cancer risk</a></h4>
+            <p class="description">Getting older is the most significant risk for developing breast cancer. 
+
+              Most breast cancers (80%) occur in women over the age of 50. And the older you are, the higher your risk.</p>
+          </div>
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-health"></i></div>
+            <h4 class="title"><a href="">Dense breast tissue</a></h4>
+            <p class="description"> Breast density is the amount of breast tissue compared to fat tissue in your breasts. If you have a high amount of breast tissue compared to fat, you have a ‘high breast density’. This increases the risk of breast cancer. 
+
+              The denser the breast, the greater the risk</p>
+          </div>
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-female"></i></div>
+            <h4 class="title"><a href="">Lifestyle and breast cancer risk</a></h4>
+            <p class="description"> By making small changes and living well now, you can lower your chances of getting breast cancer. 
+
+              It doesn’t guarantee that you won’t develop breast cancer, but leading a healthy lifestyle does give you a better chance.</p>
+          </div>
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-error"></i></div>
+            <h4 class="title"><a href="">Smoking</a></h4>
+            <p class="description"> There’s growing evidence that smoking slightly increases the risk of breast cancer. 
+
+              The risk is higher in women with a significant family history of breast cancer.
+              
+              The younger a woman is when she begins smoking, the higher her risk. The increased risk remains for at least 20 years after stopping smoking.</p>
+          </div>
+          <div class="col-xl-5 col-lg-6 d-flex align-items-stretch justify-content-center py-5 px-lg-5">
+            <img src="{% static 'assets/img/s13.jpeg'%}" alt="Image Description" style="width: 300px; height: 500px; margin-top: -1200px;margin-left: 1700px;">
+          </div>
+         
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End about_breast Section -->
+  <hr>
+   <!-- ======= Gallery Section ======= -->
+   <section id="gallery" class="gallery" style="background-color: #f7e5f1; background-size: 100% 100%;">
+    <div class="container">
+      <div class="section-title">
+        <h2 style="color: #5E1675;" >BE AWARE</h2>
+        <p>Breast cancer awareness is crucial in today's society as it helps individuals understand the signs, symptoms, and risk factors associated with this disease. By being aware of breast cancer, individuals can take proactive steps such as regular screenings and self-examinations, leading to early detection and improved treatment outcomes.</p>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row g-0">
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'assets/img/s7.jpg'%}" class="galelry-lightbox">
+              <img src="{% static 'assets/img/s7.jpg'%}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+       
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'assets/img/s3.png'%}" class="galelry-lightbox">
+              <img src="{% static 'assets/img/s3.png'%}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'assets/img/s8.jpg'%}" class="galelry-lightbox">
+              <img src="{% static 'assets/img/s8.jpg'%}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'assets/img/s10.jpg'%}" class="galelry-lightbox">
+              <img src="{% static 'assets/img/s10.jpg'%}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'assets/img/s5.webp'%}" class="galelry-lightbox">
+              <img src="{% static 'assets/img/s5.webp'%}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'assets/img/s11.jpg'%}" class="galelry-lightbox">
+              <img src="{% static 'assets/img/s11.jpg'%}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          <div class="gallery-item">
+            <a href="{% static 'assets/img/s12.jpeg'%}" class="galelry-lightbox">
+              <img src="{% static 'assets/img/s12.jpeg'%}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Gallery Section -->
+  
+  
+
+   <!-- Vendor JS Files -->
+   <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js'%}"></script>
+   <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+   <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+   <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+   <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+ 
+   <!-- Template Main JS File -->
+   <script src="{% static 'assets/js/main.js'%}"></script>
+   </body>
+  </html>

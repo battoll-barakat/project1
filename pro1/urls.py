@@ -23,6 +23,8 @@ urlpatterns = [
     path('', include("about.urls")),
      path('', include("tool.urls")),
      path('', include("faqs.urls")),
+    path('', include('breastcancer.urls')),
+    path('', include("awarness.urls")),
 
 
 ]

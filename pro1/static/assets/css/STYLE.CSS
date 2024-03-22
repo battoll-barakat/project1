@@ -794,6 +794,7 @@ color: #2c4964;
 .faq .faq-list p {
   margin-bottom: 0;
   padding: 10px 0 0 0;
+  color:#ae8cda
 }
 
 .faq .faq-list .icon-show {
@@ -821,6 +822,97 @@ color: #2c4964;
     padding: 0;
   }
 }
+/*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
+.gallery .gallery-item {
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+
+.gallery .gallery-item img {
+  transition: all ease-in-out 0.4s;
+}
+
+.gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about .icon-boxes h4 {
+  font-size: 18px;
+  color: #BA90C6;
+  margin-bottom: 15px;
+}
+
+.about .icon-boxes h3 {
+  font-size: 28px;
+  font-weight: 700;
+ color: #5E1675;
+  margin-bottom: 15px;
+}
+
+.about .icon-box {
+  margin-top: 40px;
+}
+
+.about .icon-box .icon {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border: 2px solid #f8a8e7;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.about .icon-box .icon i {
+  color: #f31cf3;
+  font-size: 32px;
+}
+
+.about .icon-box:hover .icon {
+  background: #eb5ad3;
+  border-color: #eb5ad3;
+}
+
+.about .icon-box:hover .icon i {
+  color: #fff;
+}
+
+.about .icon-box .title {
+  margin-left: 85px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 18px;
+color: #BA90C6;
+}
+
+.about .icon-box .title a {
+  color: #5E1675;
+  transition: 0.3s;
+}
+
+.about .icon-box .title a:hover {
+  color: #e981a8;
+}
+
+.about .icon-box .description {
+  margin-left: 85px;
+  line-height: 24px;
+  font-size: 14px;
+
+}
+
+
+
+ 
+
+
 
 
 

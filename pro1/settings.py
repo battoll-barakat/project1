@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'awarness.apps.AwarnessConfig',
+    'breastcancer.apps.BreastcancerConfig',
     'faqs.apps.FaqsConfig',
     'tool.apps.ToolConfig',
     'about.apps.AboutConfig',

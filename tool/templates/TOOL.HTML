@@ -6,14 +6,14 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>BREDCTIR</title>
+  <title>PBC</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-   
+  <link rel="icon" href="{% static 'assets/img/2.png'%}" type="image/x-icon">
  
    <!-- Google Fonts -->
-   <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i' %}" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"rel="stylesheet">
  
    <!-- Vendor CSS Files -->
    <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
@@ -23,7 +23,7 @@
    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
    <link href="{% static 'assets/vendor/remixicon/remixicon.css'%}" rel="stylesheet">
-   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+   <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
  
    <!-- Template Main CSS File -->
    <link href="{% static 'assets/css/STYLE.css' %}" rel="stylesheet">
@@ -67,14 +67,14 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="INDEX.HTML" class="logo me-auto"><img src="{% static 'assets/img/2.png'%}" alt="" class="img-fluid"></a></h1>
+      <h1 class="logo me-auto"><a href="{% url 'home' %}" class="logo me-auto"><img src="{% static 'assets/img/2.png'%}" alt="" class="img-fluid"></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="{% url 'home' %}">Home</a></li>
-          <li class="dropdown"><a href="ABOUT.html"><span>About Predict</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto " href="{% url 'home' %}">Home</a></li>
+          <li class="dropdown"><a href="{% url 'about' %}"><span>About Predict</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Who is it for?</a></li>
               
@@ -87,6 +87,7 @@
           </li>
           
           <li><a class="nav-link scrollto" href="{% url 'tool' %}">Predict Tool</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'awarness' %}">AWARNESS</a></li>
           <li><a class="nav-link scrollto" href="{% url 'faqs' %}">FAQS</a></li>
           
           
@@ -108,24 +109,24 @@
                     <div class="col-md-4">
                         
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="texture_mean" placeholder="Texture Mean">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="texture_mean" placeholder="Texture Mean"required>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="smoothness_mean" placeholder="Smoothness Mean">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="smoothness_mean" placeholder="Smoothness Mean"required>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="compactness_mean" placeholder="Compactness Mean">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="compactness_mean" placeholder="Compactness Mean"required>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="concave points_mean" placeholder="Concave Points Mean">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="concave points_mean" placeholder="Concave Points Mean" required>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -135,92 +136,92 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="fractal_dimension_mean" placeholder="Fractal Dimension Mean">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="fractal_dimension_mean" placeholder="Fractal Dimension Mean"required>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="texture_se" placeholder="Texture Standard Error">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="texture_se" placeholder="Texture Standard Error"required>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="area_se" placeholder="Area Standard Error">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="area_se" placeholder="Area Standard Error"required>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="smoothness_se" placeholder="Smoothness Standard Error">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="compactness_se" placeholder="Compactness Standard Error">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="concavity_se" placeholder="Concavity Standard Error">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="concave points_se" placeholder="Concave Points Standard Error">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="smoothness_se" placeholder="Smoothness Standard Error"required>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="symmetry_se" placeholder="Symmetry Standard Error">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="compactness_se" placeholder="Compactness Standard Error"required>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="fractal_dimension_se" placeholder="Fractal Dimension Standard Error">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="concavity_se" placeholder="Concavity Standard Error"required>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="texture_worst" placeholder="Texture Worst">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="area_worst" placeholder="Area Worst">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="smoothness_worst" placeholder="Smoothness Worst">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="compactness_worst" placeholder="Compactness Worst">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="concave points_se" placeholder="Concave Points Standard Error"required>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="concavity_worst" placeholder="Concavity Worst">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="symmetry_se" placeholder="Symmetry Standard Error"required>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="concave points_worst" placeholder="Concave Points Worst">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="fractal_dimension_se" placeholder="Fractal Dimension Standard Error"required>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="symmetry_worst" placeholder="Symmetry Worst">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="texture_worst" placeholder="Texture Worst"required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="area_worst" placeholder="Area Worst"required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="smoothness_worst" placeholder="Smoothness Worst"required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="compactness_worst" placeholder="Compactness Worst"required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="concavity_worst" placeholder="Concavity Worst"required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="concave points_worst" placeholder="Concave Points Worst"required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="symmetry_worst" placeholder="Symmetry Worst" required>
                         </div>
                     </div>
                 </div>
@@ -228,7 +229,7 @@
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="fractal_dimension_worst" placeholder="Fractal Dimension Worst">
+                            <input style="border: 1px solid black; background-color: #f0d0ff" class="form-control" type="text" name="fractal_dimension_worst" placeholder="Fractal Dimension Worst"required>
                         </div>
                     </div>
                     <div class="col-md-4"></div>
@@ -250,6 +251,8 @@
  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+ 
+
 
  <!-- Template Main JS File -->
  <script src="{% static 'assets/js/main.js'%}"></script>
